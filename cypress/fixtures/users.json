@@ -1,0 +1,45 @@
+[
+    {
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "first_name": "Luciano",
+        "last_name": "Lopez",
+        "zip_code": "34897"
+    },
+    {
+        "username": "locked_out_user",
+        "password": "secret_sauce"
+    },
+    {
+        "username": "problem_user",
+        "password": "secret_sauce"
+    },
+    {
+        "username": "performance_glitch_user",
+        "password": "secret_sauce"
+    },
+    {
+        "username": "error_user",
+        "password": "secret_sauce"
+    },
+    {
+        "username": "visual_user",
+        "password": "secret_sauce"
+    },
+    {
+        "username": "invalid_user",
+        "password": "secret_sauce"
+    },
+    {
+        "username": "no_exist_user",
+        "password": "secret_sauce"
+    },
+    {
+        "username": " ",
+        "password": "secret_sauce"
+    },
+    {
+        "username": "empty_password",
+        "password": " "
+    }
+]
