@@ -2,10 +2,10 @@
   "name": "cypress_automation",
   "version": "1.0.0",
   "description": "QA automation project with cypress",
-  "main": "index.js",
   "scripts": {
     "open": "npx cypress open",
-    "test": "cypress run --browser chrome"
+        "sonar-unix": "node sonar-project.js",
+        "sonar-win": "node .\\sonar-project.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,11 @@
   "cypress-cucumber-preprocessor": {
     "step_definitions": "cypress/e2e/step_definitions/"
   },
-  "devDependencies": {
+    "dependencies": {
     "cypress": "^13.12.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
+    },
+    "devDependencies": {
+        "sonarqube-scanner": "^4.0.1",
   }
 }
