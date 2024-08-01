@@ -19,7 +19,6 @@ yarn-error.log*
 .webpack/
 
 ### VisualStudioCode ###
-.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -37,3 +36,15 @@ yarn-error.log*
 # Ignore all local history of files
 .history
 .ionide
+
+# Idea IDE
+# IntelliJ IDEA files
+# Ignore everything in the folder .idea except .idea/externalDependencies.xml
+**/.idea/*
+!**/.idea/externalDependencies.xml
+*.iml
+*.iws
+*.ipr
+
+# SonarQube
+.scannerwork/
