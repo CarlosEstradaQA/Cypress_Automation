@@ -11,7 +11,7 @@
         "lintCheck:css:stylelint": "stylelint --ignore-path .gitignore '**/*.css' --allow-empty-input",
         "lintFix:json": "prettier --ignore-path .gitignore '**/*.json' --list-different --write",
         "lintCheck:json": "prettier --ignore-path .gitignore '**/*.json' --list-different",
-        "lintCheck:feature": "gherkin-lint -c .gherkin-lintrc",
+        "lintCheck:feature": "gherkin-lint -c .gherkin-lintrc.json",
         "lintFixOnlyChangedJS": "eslint --ignore-path .gitignore --fix $(git diff --name-only --diff-filter=ACMRTUXB main | grep  -E \"(.js$|.ts$|.tsx$)\")",
         "lintCheckOnlyChangedJS": "eslint --ignore-path .gitignore $(git diff --name-only --diff-filter=ACMRTUXB main | grep  -E \"(.js$|.ts$|.tsx$)\")",
         "lintFixOnlyCssAndJson": "npm run lintFix:css:stylelint ; npm run lintFix:json",
