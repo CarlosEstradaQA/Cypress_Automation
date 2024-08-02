@@ -37,8 +37,9 @@ yarn-error.log*
 .history
 .ionide
 
-# Idea IDE
-# IntelliJ IDEA files
+# Jetbrains IDEs configuration files.
+# This applies to IntelliJ, WebStorm, PyCharm, RubyMine, PhpStorm, AppCode,
+# CLion, Rider, DataGrip, GoLand, Cursive, etc.
 # Ignore everything in the folder .idea except .idea/externalDependencies.xml
 **/.idea/*
 !**/.idea/externalDependencies.xml
