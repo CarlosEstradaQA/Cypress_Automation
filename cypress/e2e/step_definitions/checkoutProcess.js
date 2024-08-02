@@ -1,18 +1,14 @@
-import {When, Then } from 'cypress-cucumber-preprocessor/steps';
-import cartPage from '../../pages/cartPage';
-import checkoutConfirmPage from '../../pages/checkoutConfirmPage';
-import finishCheckoutPage from '../../pages/finishCheckoutPage';
-
-const CartPage = new cartPage();
-const CheckoutConfirmPage = new checkoutConfirmPage();
-const FinishCheckoutPage = new finishCheckoutPage();
+import { Then } from 'cypress-cucumber-preprocessor/steps';
+import CartPage from '../../pages/CartPage';
+import FinishCheckoutPage from '../../pages/FinishCheckOutPage';
+import CheckoutConfirmPage from '../../pages/CheckOutConfirmPage';
 
 Then('I should see the title of {string}', (title) => {
     CartPage.validateCartUrl();
     CartPage.validateCartTitle(title);
 });
-Then('I should see the cart with {string} badget', (numberofProducts) => {
-    CartPage.validateCartBadget(numberofProducts);
+Then('I should see the cart with {string} badge', (numberOfProducts) => {
+    CartPage.validateCartBadge(numberOfProducts);
 });
 
 Then('I should remove the product as desired', () => {
