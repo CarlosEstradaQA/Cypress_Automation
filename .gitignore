@@ -19,7 +19,6 @@ yarn-error.log*
 .webpack/
 
 ### VisualStudioCode ###
-.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -37,3 +36,16 @@ yarn-error.log*
 # Ignore all local history of files
 .history
 .ionide
+
+# Jetbrains IDEs configuration files.
+# This applies to IntelliJ, WebStorm, PyCharm, RubyMine, PhpStorm, AppCode,
+# CLion, Rider, DataGrip, GoLand, Cursive, etc.
+# Ignore everything in the folder .idea except .idea/externalDependencies.xml
+**/.idea/*
+!**/.idea/externalDependencies.xml
+*.iml
+*.iws
+*.ipr
+
+# SonarQube
+.scannerwork/
