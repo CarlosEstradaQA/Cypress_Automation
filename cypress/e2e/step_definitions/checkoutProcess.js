@@ -11,6 +11,7 @@ Then('I should see the title of {string}', (title) => {
     CartPage.validateCartUrl();
     CartPage.validateCartTitle(title);
 });
+
 Then('I should see the cart with {string} badget', (numberofProducts) => {
     CartPage.validateCartBadget(numberofProducts);
 });
