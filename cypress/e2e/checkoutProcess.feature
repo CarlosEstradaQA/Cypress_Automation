@@ -5,7 +5,7 @@ Feature: Products details
         Given I open the website
         When I login with the user 'standard_user'
         And I add a product to the cart
-    
+
     @smokeTest
     Scenario: Checkout overview page are enable
         Then I should see the cart with '1' badget

@@ -1,31 +1,30 @@
-import {When, Then } from 'cypress-cucumber-preprocessor/steps';
+import { Then, When } from 'cypress-cucumber-preprocessor/steps';
 import homePage from '../../pages/homePage';
 
 const HomePage = new homePage();
 
 Then('I should see the all products', () => {
-  HomePage.validateProductsLenght();
+    HomePage.validateProductsLenght();
 });
 
 Then('I should see the title of the products', () => {
-  HomePage.validateTitleofProducts();
+    HomePage.validateTitleofProducts();
 });
 Then('I should see the price of the products', () => {
-  HomePage.validatePriceofProducts();
+    HomePage.validatePriceofProducts();
 });
 Then('I should see the description of the products', () => {
-  HomePage.validateDescriptionofProducts();
+    HomePage.validateDescriptionofProducts();
 });
 Then('I should see the photo of the products', () => {
-  HomePage.validatePhotoofProducts();
+    HomePage.validatePhotoofProducts();
 });
 When('I order the products by name descendant', () => {
-  HomePage.OrderByNameDescendant();
+    HomePage.OrderByNameDescendant();
 });
 When('I order the products by price descendant', () => {
-  HomePage.OrderByPriceDescendant();
+    HomePage.OrderByPriceDescendant();
 });
 When('I add a product to the cart', () => {
-  HomePage.addProductToCartList();
+    HomePage.addProductToCartList();
 });
-
