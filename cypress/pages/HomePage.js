@@ -1,6 +1,6 @@
 class HomePage {
     elements = {
-        burguerButton: () => cy.get('#react-burger-menu-btn'),
+        burgerButton: () => cy.get('#react-burger-menu-btn'),
         allItemsBurgerOption: () => cy.get('#inventory_sidebar_link'),
         productList: () => cy.get('[data-test="inventory-item"]'),
         urlPath: () => cy.url(),
@@ -10,7 +10,7 @@ class HomePage {
         addToCartButton: () => cy.get('[data-test^="add-to-cart-"]').first(),
     };
 
-    validateInventaryUrl() {
+    validateInventoryUrl() {
         this.elements.urlPath().should('eq', 'https://www.saucedemo.com/inventory.html');
     }
 
@@ -18,12 +18,12 @@ class HomePage {
         this.elements.headerTitle().should('be.visible').contains(title);
     }
 
-    validateProductsLenght() {
+    validateProductsLength() {
         this.elements.productList().should('have.length.at.gt', 1);
         this.elements.productList().should('have.length.at.least', 6);
     }
 
-    validateTitleofProducts() {
+    validateTitleOfProducts() {
         this.elements.productList().each(($product) => {
             cy.get($product).find('.inventory_item_name').should('be.visible')
                 .should('exist')
@@ -33,7 +33,7 @@ class HomePage {
         });
     }
 
-    validatePriceofProducts() {
+    validatePriceOfProducts() {
         this.elements.productList().each(($product) => {
             cy.get($product).find('.inventory_item_price').should('be.visible')
                 .should('exist')
@@ -43,7 +43,7 @@ class HomePage {
         });
     }
 
-    validateDescriptionofProducts() {
+    validateDescriptionOfProducts() {
         this.elements.productList().each(($product) => {
             cy.get($product).find('.inventory_item_desc').should('be.visible')
                 .should('exist')
@@ -53,7 +53,7 @@ class HomePage {
         });
     }
 
-    validatePhotoofProducts() {
+    validatePhotoOfProducts() {
         this.elements.productList().each(($product) => {
             cy.get($product).find('[id$="_img_link"]').should('be.visible')
                 .should('exist')
@@ -61,11 +61,11 @@ class HomePage {
         });
     }
 
-    OrderByNameDescendant() {
+    orderByNameDescendant() {
         this.elements.filterDropdown().should('be.visible').select('za');
     }
 
-    OrderByPriceDescendant() {
+    orderByPriceDescendant() {
         this.elements.filterDropdown().should('be.visible').select('hilo');
     }
 

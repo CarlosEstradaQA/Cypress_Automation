@@ -6,12 +6,12 @@ class FinishCheckoutPage {
 
     validateFinishMessage() {
         this.elements.thankMessage().should('be.visible').should('exist').invoke('text')
-            .then((tempvalue) => {
-                expect(tempvalue).to.equal('Thank you for your order!');
+            .then((tempValue) => {
+                expect(tempValue).to.equal('Thank you for your order!');
             });
         this.elements.checkoutStatusLabel().should('be.visible').should('exist').invoke('text')
-            .then((tempvalue) => {
-                expect(tempvalue).to.equal('Checkout: Complete!');
+            .then((tempValue) => {
+                expect(tempValue).to.equal('Checkout: Complete!');
             });
     }
 }

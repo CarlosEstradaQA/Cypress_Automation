@@ -2,7 +2,7 @@ class CartPage {
     elements = {
         urlPath: () => cy.url(),
         cartTitle: () => cy.get('[data-test="title"]'),
-        cartBadget: () => cy.get('[data-test="shopping-cart-badge"]'),
+        cartBadge: () => cy.get('[data-test="shopping-cart-badge"]'),
         removeProductButton: () => cy.get('[data-test^="remove-"]').contains('Remove'),
         checkoutButton: () => cy.get('[data-test="checkout"]'),
         productList: () => cy.get('[data-test="inventory-item"]'),
@@ -21,12 +21,12 @@ class CartPage {
             });
     }
 
-    validateCartBadget(amount) {
+    validateCartBadge(amount) {
         cy.scrollTo('top');
         if (amount === '0') {
-            this.elements.cartBadget().should('not.exist');
+            this.elements.cartBadge().should('not.exist');
         } else {
-            this.elements.cartBadget().should('be.visible').invoke('text').should('equal', amount);
+            this.elements.cartBadge().should('be.visible').invoke('text').should('equal', amount);
         }
     }
 

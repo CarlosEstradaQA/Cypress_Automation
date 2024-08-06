@@ -15,7 +15,7 @@ When('I login with the user {string}', (userName) => {
 });
 
 Then('I should see the header {string}', (title) => {
-    homePage.validateInventaryUrl();
+    homePage.validateInventoryUrl();
     homePage.validateHeaderTitle(title);
 });
 
