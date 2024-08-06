@@ -1,4 +1,4 @@
-class finishCheckoutPage {
+class FinishCheckoutPage {
     elements = {
         thankMessage: () => cy.get('[data-test="complete-header"]'),
         checkoutStatusLabel: () => cy.get('[data-test="title"]'),
@@ -16,4 +16,4 @@ class finishCheckoutPage {
     }
 }
 
-export default finishCheckoutPage;
+export default FinishCheckoutPage;

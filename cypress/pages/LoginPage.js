@@ -1,6 +1,6 @@
 import { returnObjectSearchingByKey } from '../support/utils/fixtureInteraction';
 
-class loginPage {
+class LoginPage {
     elements = {
         userField: () => cy.get('[data-test="username"]'),
         passwordField: () => cy.get('[data-test="password"]'),
@@ -37,4 +37,4 @@ class loginPage {
     }
 }
 
-export default loginPage;
+export default LoginPage;

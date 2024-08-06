@@ -1,13 +1,13 @@
 import { Given, Then, When } from 'cypress-cucumber-preprocessor/steps';
-import loginPage from '../../pages/loginPage';
-import homePage from '../../pages/homePage';
+import LoginPage from '../../pages/LoginPage';
+import HomePage from '../../pages/HomePage';
 
-const LoginPage = new loginPage();
-const HomePage = new homePage();
+const loginPage = new LoginPage();
+const homePage = new HomePage();
 
 Given('I open the website', () => {
     cy.visit('/');
-    LoginPage.validateLoginPage();
+    loginPage.validateLoginPage();
 });
 
 When('I login with the user {string}', (userName) => {
@@ -15,10 +15,10 @@ When('I login with the user {string}', (userName) => {
 });
 
 Then('I should see the header {string}', (title) => {
-    HomePage.validateInventaryUrl();
-    HomePage.validateHeaderTitle(title);
+    homePage.validateInventaryUrl();
+    homePage.validateHeaderTitle(title);
 });
 
 Then('I should see the warning', () => {
-    LoginPage.warningMessage();
+    loginPage.warningMessage();
 });

@@ -1,4 +1,4 @@
-class checkoutConfirmationPage {
+class CheckoutConfirmationPage {
     elements = {
         productPrice: () => cy.get('[data-test="inventory-item-price"]'),
         subtotalLabel: () => cy.get('[data-test="subtotal-label"]'),
@@ -21,4 +21,4 @@ class checkoutConfirmationPage {
     }
 }
 
-export default checkoutConfirmationPage;
+export default CheckoutConfirmationPage;

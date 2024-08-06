@@ -1,17 +1,17 @@
-import loginPage from '../pages/loginPage';
-import checkoutInformationPage from '../pages/checkoutInformationPage';
+import LoginPage from '../pages/LoginPage';
+import CheckoutInformationPage from '../pages/CheckoutInformationPage';
 
-const LoginPage = new loginPage();
-const CheckoutInformationPage = new checkoutInformationPage();
+const loginPage = new LoginPage();
+const checkoutInformationPage = new CheckoutInformationPage();
 
 Cypress.Commands.add('authentication', (userName) => {
     cy.fixture('users').then((userData) => {
-        LoginPage.login(userData, userName);
+        loginPage.login(userData, userName);
     });
 });
 
 Cypress.Commands.add('personalInformation', (userName) => {
     cy.fixture('users').then((userData) => {
-        CheckoutInformationPage.completePersonalInformation(userData, userName);
+        checkoutInformationPage.completePersonalInformation(userData, userName);
     });
 });

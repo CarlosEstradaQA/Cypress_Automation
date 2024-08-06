@@ -1,6 +1,6 @@
 import { returnObjectSearchingByKey } from '../support/utils/fixtureInteraction';
 
-class checkoutInformationPage {
+class CheckoutInformationPage {
     elements = {
         firstNameField: () => cy.get('[data-test="firstName"]'),
         lastNameField: () => cy.get('[data-test="lastName"]'),
@@ -29,4 +29,4 @@ class checkoutInformationPage {
     }
 }
 
-export default checkoutInformationPage;
+export default CheckoutInformationPage;

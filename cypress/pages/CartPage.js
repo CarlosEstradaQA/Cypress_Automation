@@ -1,4 +1,4 @@
-class cartPage {
+class CartPage {
     elements = {
         urlPath: () => cy.url(),
         cartTitle: () => cy.get('[data-test="title"]'),
@@ -40,4 +40,4 @@ class cartPage {
     }
 }
 
-export default cartPage;
+export default CartPage;
