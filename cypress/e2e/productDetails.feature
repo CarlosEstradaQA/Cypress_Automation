@@ -4,7 +4,7 @@ Feature: Products details
     Background: go to website
         Given I open the website
         When I login with the user 'standard_user'
-    
+
     @smokeTest
     Scenario: user can see the all 6 products in total
         Then I should see the all products

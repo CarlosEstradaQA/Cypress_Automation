@@ -1,4 +1,4 @@
-import {When, Then } from 'cypress-cucumber-preprocessor/steps';
+import { Then } from 'cypress-cucumber-preprocessor/steps';
 import cartPage from '../../pages/cartPage';
 import checkoutConfirmPage from '../../pages/checkoutConfirmPage';
 import finishCheckoutPage from '../../pages/finishCheckoutPage';
@@ -11,6 +11,7 @@ Then('I should see the title of {string}', (title) => {
     CartPage.validateCartUrl();
     CartPage.validateCartTitle(title);
 });
+
 Then('I should see the cart with {string} badget', (numberofProducts) => {
     CartPage.validateCartBadget(numberofProducts);
 });

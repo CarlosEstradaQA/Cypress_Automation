@@ -94,7 +94,9 @@ following command to run the analysis:
 ```bash
 npm run sonar-unix
 ```
+
 Or
+
 ```bash
 npm run sonar-win
 ```
