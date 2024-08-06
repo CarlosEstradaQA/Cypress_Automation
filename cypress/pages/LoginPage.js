@@ -1,4 +1,4 @@
-import { returnObjectSearchingByKey } from '../support/utils/fixtureInteraction';
+import returnObjectSearchingByKey from '../support/utils/fixtureInteraction';
 
 class LoginPage {
     elements = {
