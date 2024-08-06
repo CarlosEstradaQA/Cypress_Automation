@@ -1,4 +1,5 @@
 const { defineConfig } = require('cypress');
+const setupNodeEvents = require('./cypress/plugins/index');
 
 module.exports = defineConfig({
     numTestsKeptInMemory: 0,
@@ -13,7 +14,7 @@ module.exports = defineConfig({
     e2e: {
         baseUrl: 'https://www.saucedemo.com',
         setupNodeEvents(on, config) {
-            return require('./cypress/plugins/index.js')(on, config);
+            return setupNodeEvents(on, config);
         },
         specPattern: 'cypress/e2e/**/*.feature',
         defaultCommandTimeout: 10000,
