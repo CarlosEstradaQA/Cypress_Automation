@@ -1,4 +1,4 @@
-class homePage {
+class HomePage {
     elements = {
         burguerButton: () => cy.get('#react-burger-menu-btn'),
         allItemsBurgerOption: () => cy.get('#inventory_sidebar_link'),
@@ -74,4 +74,5 @@ class homePage {
         this.elements.cartListButton().click();
     }
 }
-export default homePage;
+
+export default HomePage;
