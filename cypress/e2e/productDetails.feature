@@ -21,15 +21,15 @@ Feature: Products details
     Scenario: User can see that each item has a photo
         Then I should see the photo of the products
 
-    Scenario: user can filter the inventary by name descendent
+    Scenario: user can filter the inventory by name descendent
         When I order the products by name descendant
         Then I should see the title of the products
 
-    Scenario: user can filter the inventary by price descendent
+    Scenario: user can filter the inventory by price descendent
         When I order the products by price descendant
         Then I should see the price of the products
 
     Scenario: user can add an item to the shopping cart
         When I add a product to the cart
         Then I should see the title of 'Your Cart'
-        And I should see the cart with '1' badget
+        And I should see the cart with '1' badge

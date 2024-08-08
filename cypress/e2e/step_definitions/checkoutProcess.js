@@ -12,8 +12,8 @@ Then('I should see the title of {string}', (title) => {
     cartPage.validateCartTitle(title);
 });
 
-Then('I should see the cart with {string} badget', (numberofProducts) => {
-    cartPage.validateCartBadget(numberofProducts);
+Then('I should see the cart with {string} badge', (numberOfProducts) => {
+    cartPage.validateCartBadge(numberOfProducts);
 });
 
 Then('I should remove the product as desired', () => {

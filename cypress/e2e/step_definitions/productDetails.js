@@ -4,31 +4,31 @@ import HomePage from '../../pages/HomePage';
 const homePage = new HomePage();
 
 Then('I should see the all products', () => {
-    homePage.validateProductsLenght();
+    homePage.validateProductsLength();
 });
 
 Then('I should see the title of the products', () => {
-    homePage.validateTitleofProducts();
+    homePage.validateTitleOfProducts();
 });
 
 Then('I should see the price of the products', () => {
-    homePage.validatePriceofProducts();
+    homePage.validatePriceOfProducts();
 });
 
 Then('I should see the description of the products', () => {
-    homePage.validateDescriptionofProducts();
+    homePage.validateDescriptionOfProducts();
 });
 
 Then('I should see the photo of the products', () => {
-    homePage.validatePhotoofProducts();
+    homePage.validatePhotoOfProducts();
 });
 
 When('I order the products by name descendant', () => {
-    homePage.OrderByNameDescendant();
+    homePage.orderByNameDescendant();
 });
 
 When('I order the products by price descendant', () => {
-    homePage.OrderByPriceDescendant();
+    homePage.orderByPriceDescendant();
 });
 
 When('I add a product to the cart', () => {

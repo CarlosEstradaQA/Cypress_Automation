@@ -7,12 +7,12 @@ class CheckoutConfirmationPage {
 
     validateProductPrice() {
         this.elements.productPrice().should('be.visible').should('exist').invoke('text')
-            .then((tempvalue) => {
-                expect(tempvalue).to.equal(Cypress.env('itemPrice'));
+            .then((tempValue) => {
+                expect(tempValue).to.equal(Cypress.env('itemPrice'));
             });
         this.elements.subtotalLabel().should('be.visible').should('exist').invoke('text')
-            .then((tempvalue) => {
-                expect(tempvalue.split(' ')[2]).to.equal(Cypress.env('itemPrice'));
+            .then((tempValue) => {
+                expect(tempValue.split(' ')[2]).to.equal(Cypress.env('itemPrice'));
             });
     }
 
