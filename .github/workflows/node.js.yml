@@ -41,6 +41,8 @@ jobs:
 
             -   name: Spotless/Linter check
                 run: npm run lintCheckAll
+                continue-on-error: false
 
             -   name: Test
                 run: npm run test
+                if: success()
