@@ -1,6 +1,8 @@
 const { defineConfig } = require('cypress');
 const setupNodeEvents = require('./cypress/plugins/index');
 
+error;
+
 module.exports = defineConfig({
     numTestsKeptInMemory: 0, // 0 = default behavior
     // Standardize timeouts across most actions (consider adjusting as needed)
