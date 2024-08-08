@@ -19,7 +19,7 @@
         "lintFix": "npm run lintFixOnlyCssAndJson ; npm run lintFixOnlyChangedJS; npm run lintCheck:feature",
         "lintCheck": "npm run lintCheckOnlyCssAndJson ; npm run lintCheckOnlyChangedJS; npm run lintCheck:feature",
         "lintFixAll": "npm run lintFixOnlyCssAndJson ; npm run lintFix:js; npm run lintCheck:feature",
-        "lintCheckAll": "npm run lintCheckOnlyCssAndJson ; npm run lintCheck:js; npm run lintCheck:feature",
+        "lintCheckAll": "npm run lintCheckOnlyCssAndJson & npm run lintCheck:js & npm run lintCheck:feature",
         "prepare": "husky",
         "postinstall": "husky",
         "pre-commit": "npm run lintFixAll",
