@@ -12,7 +12,8 @@ module.exports = defineConfig({
     chromeWebSecurity: false, // Set to true for production
 
     env: {
-        itemPrice: '',
+        // Provide a default value or load from environment variables
+        itemPrice: process.env.ITEM_PRICE || '',
     },
 
     e2e: {
