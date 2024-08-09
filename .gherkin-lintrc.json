@@ -8,7 +8,12 @@
     "no-multiple-empty-lines": "off",
     "no-empty-file": "on",
     "no-scenario-outlines-without-examples": "on",
-    "no-restricted-tags": ["on", { "tags": ["@watch", "@wip"] }],
+    "no-restricted-tags": [
+        "on",
+        {
+            "tags": ["@watch", "@wip"]
+        }
+    ],
     "use-and": "on",
     "no-duplicate-tags": "on",
     "no-superfluous-tags": "on",
@@ -19,6 +24,11 @@
     "no-empty-background": "on",
     "scenario-size": [
         "on",
-        { "steps-length": { "Background": 50, "Scenario": 50 } }
+        {
+            "steps-length": {
+                "Background": 50,
+                "Scenario": 50
+            }
+        }
     ]
 }

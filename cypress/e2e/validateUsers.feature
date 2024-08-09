@@ -3,7 +3,7 @@ Feature: Login to a website
 
     Background: go to website
         Given I open the website
-    
+
     @smokeTest
     Scenario: user can successful login
         When I login with the user 'standard_user'
@@ -12,7 +12,7 @@ Feature: Login to a website
     Scenario: user can login with problem user
         When I login with the user 'problem_user'
         Then I should see the header 'Swag Labs'
-    
+
     Scenario: user can login with delay
         When I login with the user 'performance_glitch_user'
         Then I should see the header 'Swag Labs'
