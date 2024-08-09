@@ -14,27 +14,15 @@ jobs:
 
         runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [ 16.x ]
-                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
         steps:
-            -   uses: actions/checkout@v3
-            -   name: Use Node.js ${{ matrix.node-version }}
-                uses: actions/setup-node@v3
+            -   name: Checkout code
+                uses: actions/checkout@v4
+
+            -   name: Set up Node.js
+                uses: actions/setup-node@v4
                 with:
-                    node-version: ${{ matrix.node-version }}
+                    node-version: '18'
                     cache: 'npm'
-            -   name: Cache npm dependencies
-                uses: actions/cache@v3
-                with:
-                    path: ~/.npm
-                    key: ${{ runner.os }}-node-${{ matrix.node-version }}-deps-${{ hashFiles('package-lock.json') }}
-                    restore-keys: |
-                        ${{ runner.os }}-node-${{ matrix.node-version }}-deps-
-                        ${{ runner.os }}-node-${{ matrix.node-version }}-
-                        ${{ runner.os }}-node-
 
             -   name: Install
                 run: npm install
