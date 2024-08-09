@@ -4,6 +4,9 @@
 node_modules/
 
 # Cypress specific
+cypress/results/
+cypress/cucumber-report
+cypress/cucumber-json
 cypress/screenshots/
 cypress/videos/
 cypress/downloads/
