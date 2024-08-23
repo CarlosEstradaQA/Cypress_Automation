@@ -8,7 +8,7 @@ report.generate({
     ignoreBadJsonFile: true,
     durationInM: true,
     displayDuration: true,
-    reportName: 'Cypress automation with Cucumber over SouceDemo',
+    reportName: 'Cypress automation with Cucumber over SauceDemo',
     pageTitle: 'Automation Report',
     displayReportTime: true,
 
