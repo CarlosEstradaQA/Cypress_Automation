@@ -25,7 +25,11 @@
         "pre-commit": "npm run lintFixAll",
         "pre-push": "npm run pre-commit && npm run test",
         "sonar-unix": "node sonar-project.js",
-        "sonar-win": "node .\\sonar-project.js"
+        "sonar-win": "node .\\sonar-project.js",
+        "cy:report": "node ./cypress/reports/report.js",
+        "pretest": "npm run clean:reports",
+        "posttest": "npm run cy:report",
+        "clean:reports": "if [ -d \"cypress/cucumber-report\" ]  ; then rm -r cypress/cucumber-report cypress/cucumber-json; fi"
     },
     "repository": {
         "type": "git",
@@ -34,11 +38,19 @@
     "author": "Carlos Armando Estrada Torres",
     "license": "ISC",
     "cypress-cucumber-preprocessor": {
-        "step_definitions": "cypress/e2e/step_definitions/"
+        "step_definitions": "cypress/e2e/step_definitions/",
+        "cucumberJson": {
+            "generate": true,
+            "output": "/reports/cucumber_report.html",
+            "screenshotsDirectory": "screenshots/",
+            "storeScreenshots": true
+        }
     },
     "dependencies": {
         "cypress": "^13.12.0",
-        "cypress-cucumber-preprocessor": "^4.3.1"
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "moment": "^2.30.1",
+        "multiple-cucumber-html-reporter": "^3.7.0"
     },
     "devDependencies": {
         "eslint-config-airbnb": "^19.0.4",
